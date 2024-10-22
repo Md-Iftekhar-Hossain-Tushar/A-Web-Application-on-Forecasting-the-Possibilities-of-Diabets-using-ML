@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabates Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Give proper values to check the prediction</h2>
+        <form action="predict_diabates" method="POST">
+           
+            <div class="form-group">
+                <label for="Pregnancies">Pregnancies:</label>
+                <input type="number" id="Pregnancies" name="Pregnancies" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Glucose">Glucose:</label>
+                <input type="number" id="Glucose" name="Glucose" required>
+            </div>
+            <div class="form-group">
+                <label for="BloodPressure">BloodPressure:</label>
+                <input type="number" id="BloodPressure" name="BloodPressure" required>
+            </div>
+            <div class="form-group">
+                <label for="SkinThickness">SkinThickness:</label>
+                <input type="number" id="SkinThickness" name="SkinThickness" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Insulin">Insulin:</label>
+                <input type="number" id="Insulin" name="Insulin" required>
+            </div>
+            <div class="form-group">
+                <label for="BMI">BMI:</label>
+                <input type="number" id="BMI" name="BMI" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+                <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" step="0.001" required>
+            </div>
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="number" id="Age" name="Age" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
